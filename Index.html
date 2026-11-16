@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google</title>
+<style>
+body{font-family:Arial,sans-serif;text-align:center;margin:0;padding:0}
+.top{display:flex;justify-content:flex-end;gap:20px;padding:15px 25px;font-size:14px}
+.top a{color:#000;text-decoration:none}
+.logo{margin-top:120px;font-size:90px;font-weight:400;letter-spacing:-5px}
+.logo span:nth-child(1){color:#4285F4}
+.logo span:nth-child(2){color:#EA4335}
+.logo span:nth-child(3){color:#FBBC05}
+.logo span:nth-child(4){color:#4285F4}
+.logo span:nth-child(5){color:#34A853}
+.logo span:nth-child(6){color:#EA4335}
+.search{margin:30px auto;width:90%;max-width:580px;border:1px solid #dfe1e5;border-radius:30px;padding:12px 20px;display:flex;align-items:center;box-shadow:0 1px 6px rgba(0,0,0,0.1)}
+.search input{border:none;outline:none;width:100%;font-size:16px}
+.btns{margin-top:25px}
+.btns button{background:#f8f9fa;border:1px solid #f8f9fa;padding:10px 20px;margin:5px;border-radius:5px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="top"><a href="#">Gmail</a><a href="#">Imágenes</a><a href="#">☰</a><a href="#">👤</a></div>
+<div class="logo"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+<form action="https://www.google.com/search" method="GET">
+<div class="search">🔍 <input type="text" name="q" placeholder="Buscar en Google o escribir una URL" autofocus></div>
+<div class="btns">
+<button type="submit">Buscar con Google</button>
+<button type="submit" name="btnI" value="1">Voy a tener suerte</button>
+</div>
+</form>
+<p style="margin-top:30px;font-size:13px">Ofrecido por Google en: <a href="#">Español</a></p>
+</body>
+</html>
