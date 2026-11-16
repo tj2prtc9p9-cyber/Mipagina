@@ -3,47 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOS INTOCABLES - DNS</title>
+<title>LOS INTOCABLES - Firma IPA</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
-  body{background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:30px 20px}
-  .logo{width:90px;height:90px;background:linear-gradient(135deg,#a855f7,#ec4899);border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:45px;font-weight:900;box-shadow:0 0 40px rgba(168,85,247,.6);margin-top:20px}
-  h1{font-size:28px;margin:18px 0 5px;letter-spacing:1px;text-align:center}
-  h1 span{color:#a855f7}
-  p.sub{color:#999;font-size:14px;text-align:center;margin-bottom:30px}
-  .card{background:#111;border:1px solid #222;border-radius:20px;padding:22px;width:100%;max-width:380px;text-align:center}
-  .icon{font-size:40px;margin-bottom:10px}
-  .card h2{font-size:18px;margin-bottom:6px}
-  .card p{color:#888;font-size:13px;line-height:1.5;margin-bottom:20px}
-  .install{display:block;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;text-decoration:none;padding:16px;border-radius:14px;font-weight:800;font-size:16px}
-  .install:active{transform:scale(.97)}
-  .pasos{margin-top:25px;width:100%;max-width:380px}
-  .paso{display:flex;gap:12px;margin-bottom:12px;font-size:13px;color:#ccc;line-height:1.4}
-  .num{background:#222;width:26px;height:26px;min-width:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#a855f7}
-  .footer{margin-top:30px;color:#555;font-size:11px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif}
+body{background:#0a0a0c;color:#fff;padding-bottom:90px}
+header{position:sticky;top:0;z-index:10;background:rgba(10,10,12,.9);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid #1f1f23}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,#ff2d55,#ff9500);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px}
+.logo b{font-size:17px;letter-spacing:1px}
+.logo span{display:block;font-size:10px;color:#888;letter-spacing:2px;font-weight:400}
+.pill{font-size:11px;background:#1a2e1a;color:#4cd964;padding:6px 10px;border-radius:999px;border:1px solid #2a4a2a}
+.hero{padding:24px 18px 10px}
+.badge{display:inline-block;background:#1e1e22;border:1px solid #2a2a2e;padding:6px 12px;border-radius:999px;font-size:11px;color:#aaa}
+.hero h1{font-size:32px;line-height:1.1;margin:14px 0 8px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#ff2d55,#ff9500);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#9a9aa0;font-size:14px;line-height:1.6}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:16px 18px}
+.step{background:#151517;border:1px solid #222;border-radius:16px;padding:14px}
+.step i{width:26px;height:26px;background:#fff;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;font-style:normal}
+.step b{display:block;font-size:12px;margin:10px 0 4px}
+.step p{font-size:11px;color:#888;line-height:1.4}
+.dns-card{margin:4px 18px 18px;background:linear-gradient(135deg,#1a1a1f,#121214);border:1px solid #2a2a2e;border-radius:20px;padding:18px}
+.dns-card h2{font-size:16px}
+.dns-card p{color:#999;font-size:13px;line-height:1.5;margin:8px 0 14px}
+.btn-perfil{display:block;background:#fff;color:#000;text-align:center;font-weight:900;padding:15px;border-radius:14px;text-decoration:none;font-size:14px}
+.btn-perfil small{display:block;font-weight:400;font-size:11px;color:#666;margin-top:3px}
+.controls{padding:0 18px;display:flex;gap:10px}
+.search{flex:1;background:#151517;border:1px solid #222;border-radius:12px;padding:12px;color:#fff;outline:none}
+.tabs{display:flex;gap:8px;padding:14px 18px;overflow-x:auto}
+.tab{border:1px solid #26262b;background:#151517;color:#aaa;padding:9px 16px;border-radius:999px;font-size:13px;cursor:pointer;white-space:nowrap}
+.tab.active{background:#fff;color:#000;font-weight:800;border-color:#fff}
+.list{padding:0 18px}
+.card{display:flex;align-items:center;gap:12px;background:#121214;border:1px solid #1e1e22;border-radius:18px;padding:14px;margin-bottom:10px}
+.app-icon{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;flex-shrink:0}
+.k{background:#1a6cff}.e{background:#7d3cff}.s{background:#ff3b30}.g{background:#00c853}
+.info{flex:1;min-width:0}
+.info b{font-size:15px}
+.tag{font-size:10px;padding:3px 7px;border-radius:5px;margin-left:6px;vertical-align:middle}
+.nuevo{background:#ff2d55}.ok{background:#1a3a1a;color:#4cd964}.off{background:#333;color:#999}
+.info p{color:#888;font-size:12px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.install{background:#fff;color:#000;padding:10px 16px;border-radius:999px;font-weight:900;font-size:12px;text-decoration:none;flex-shrink:0}
+footer{text-align:center;color:#555;font-size:12px;line-height:1.9;padding:28px 18px}
+footer b{color:#fff}
 </style>
 </head>
 <body>
 
-  <div class="logo">L</div>
-  <h1>LOS <span>INTOCABLES</span></h1>
-  <p class="sub">Anti-Revoke DNS</p>
+<header>
+  <div class="logo"><div class="logo-icon">L</div><div><b>LOS INTOCABLES</b><span>STORE • iOS</span></div></div>
+  <div class="pill">● ONLINE</div>
+</header>
 
-  <div class="card">
-    <div class="icon">🛡️</div>
-    <h2>Perfil DNS Anti-Revoke</h2>
-    <p>Protege tus certificados de Apple. Instálalo una vez y listo.</p>
-    <aclass="install" href="https://davidum19.github.io/Mipagina/dns.mobileconfig
-  </div>
+<div class="hero">
+  <span class="badge">🔥 FIRMA IPA • SIN PC • SIN JAILBREAK</span>
+  <h1>Firma tu IPA<br><em>en 2 minutos.</em></h1>
+  <p>Instala el DNS, elige tu firmador favorito y firma LOS INTOCABLES directo desde tu iPhone.</p>
+</div>
 
-  <div class="pasos">
-    <div class="paso"><div class="num">1</div><div>Dale en <b>INSTALAR PERFIL DNS</b></div></div>
-    <div class="paso"><div class="num">2</div><div>Dale <b>Permitir</b></div></div>
-    <div class="paso"><div class="num">3</div><div>Ve a <b>Ajustes > General > VPN y gestión de dispositivos</b></div></div>
-    <div class="paso"><div class="num">4</div><div>Toca el perfil y dale <b>Instalar</b></div></div>
-  </div>
+<div class="steps">
+  <div class="step"><i>1</i><b>Instala DNS</b><p>Obligatorio para firmar</p></div>
+  <div class="step"><i>2</i><b>Instala Firmador</b><p>KSign, Esign, etc.</p></div>
+  <div class="step"><i>3</i><b>Firma IPA</b><p>Importa y firma</p></div>
+</div>
 
-  <div class="footer">© 2026 LOS INTOCABLES</div>
+<div class="dns-card">
+  <h2>PASO 1 — Perfil DNS Anti-Revoke</h2>
+  <p>Si no instalas esto primero, el certificado se te va a revocar. Dale permitir y luego instálalo en Ajustes > General > VPN y gestión de dispositivos.</p>
+  <a class="btn-perfil" href="https://davidum19.github.io/ios-perfil/CFDNS-CP144%20(1).mobileconfig">⬇ INSTALAR PERFIL DNS<small>CFDNS-CP144 • Compatible iOS 16 - 18</small></a>
+</div>
 
+<div class="controls"><input class="search" id="buscador" placeholder="🔍 Buscar certificado... ej. HSBC, Vietnam..."></div>
+
+<div class="tabs" id="tabs">
+  <button class="tab active" onclick="filtrar('KSign',this)">KSign</button>
+  <button class="tab" onclick="filtrar('Esign',this)">Esign</button>
+  <button class="tab" onclick="filtrar('Scarlet',this)">Scarlet</button>
+  <button class="tab" onclick="filtrar('GBox',this)">GBox</button>
+</div>
+
+<div class="list" id="lista">
+  <div class="card" data-cat="KSign" data-nombre="ksign beihang university"><div class="app-icon k">K</div><div class="info"><b>KSign <span class="tag nuevo">NUEVO</span> <span class="tag ok">● ACTIVO</span></b><p>Beihang University • Certificado</p></div><a class="install" href="#">INSTALAR</a></div>
+  <div class="card" data-cat="KSign" data-nombre="ksign china limited"><div class="app-icon k">K</div><div class="info"><b>KSign <span class="tag nuevo">NUEVO</span> <span class="tag ok">● ACTIVO</span></b><p>China Limited • Certificado</p></div><a class="install" href="#">INSTALAR</a></div>
+  <div class="card" data-cat="KSign" data-nombre="ksign hsbc"><div class="app-icon k">K</div><div class="info"><b>KSign <span class="tag ok">● ACTIVO</span></b><p>HSBC • Certificado</p></div><a class="install" href="#">INSTALAR</a></div>
+  <div class="card" data-cat="Esign" data-nombre="esign vietnam rubber"><div class="app-icon e">E</div><div class="info"><b>Esign <span class="tag ok">● ACTIVO</span></b><p>Vietnam Rubber • Certificado</p></div><a class="install" href="#">INSTALAR</a></div>
+  <div class="card" data-cat="Esign" data-nombre="esign vietnam airlines"><div class="app-icon e">E</div><div class="info"><b>Esign <span class="tag off">REVOCADO</span></b><p>Vietnam Airlines JSC</p></div><a class="install" href="#">INSTALAR</a></div>
+  <div class="card" data-cat="Scarlet" data-nombre="scarlet"><div class="app-icon s">S</div><div class="info"><b>Scarlet <span class="tag ok">● ACTIVO</span></b><p>Scarlet Cloud • Sin certificado</p></div><a class="install" href="#">INSTALAR</a></div>
+  <div class="card" data-cat="GBox" data-nombre="gbox"><div class="app-icon g">G</div><div class="info"><b>GBox <span class="tag nuevo">NUEVO</span></b><p>GBox App • Directo</p></div><a class="install" href="#">INSTALAR</a></div>
+</div>
+
+<footer><b>LOS INTOCABLES</b><br>Distribución oficial para iOS<br>Discord Anuncio &nbsp;•&nbsp; Discord Soporte &nbsp;•&nbsp; Portal Revendedores<br>© 2026 LOS INTOCABLES</footer>
+
+<script>
+function filtrar(cat,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display = c.dataset.cat===cat ? 'flex' : 'none';
+  });
+}
+document.getElementById('buscador').addEventListener('input',function(){
+  let q=this.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display = c.dataset.nombre.includes(q) ? 'flex' : 'none';
+  });
+});
+</script>
 </body>
 </html>
