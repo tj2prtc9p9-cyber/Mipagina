@@ -3,79 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOS INTOCABLES</title>
+<title>LOS INTOCABLES - DNS</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,Arial,sans-serif}
-body{background:#000;color:#fff;padding:16px;padding-bottom:80px}
-.top{display:flex;justify-content:space-between;align-items:center;padding:8px 4px}
-.top b{font-size:19px;letter-spacing:.5px}
-.top span{color:#666;font-size:22px}
-.cat{color:#888;font-size:11px;letter-spacing:2px;margin-top:18px}
-h1{font-size:28px;margin:4px 0 8px}
-.desc{color:#aaa;font-size:14px;line-height:1.5}
-.paso{margin-top:22px}
-.paso b{font-size:15px}
-.paso p{color:#aaa;font-size:13px;line-height:1.5;margin-top:4px}
-.btn-perfil{display:block;background:#fff;color:#000;text-align:center;font-weight:800;padding:14px;border-radius:999px;margin-top:14px;text-decoration:none;font-size:14px;letter-spacing:.5px}
-.tabs{display:flex;gap:8px;margin-top:22px;overflow-x:auto}
-.tabs a{color:#aaa;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:14px;white-space:nowrap}
-.tabs a.active{background:#fff;color:#000;font-weight:700}
-.section{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
-.section b{font-size:18px}
-.section span{color:#888;font-size:13px}
-.sub{color:#aaa;font-size:13px;margin:6px 0 14px}
-.item{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #1a1a1a}
-.icon{width:52px;height:52px;background:#1a6cff;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;flex-shrink:0}
-.info{flex:1;min-width:0}
-.info b{font-size:15px;display:block}
-.info .nuevo{color:#fff;background:#222;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:5px}
-.info p{color:#888;font-size:12px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.install{background:#fff;color:#000;border:none;padding:9px 15px;border-radius:999px;font-weight:800;font-size:12px;text-decoration:none;flex-shrink:0}
-.footer{text-align:center;color:#666;font-size:12px;margin-top:30px;line-height:1.8}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+  body{background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:30px 20px}
+  .logo{width:90px;height:90px;background:linear-gradient(135deg,#a855f7,#ec4899);border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:45px;font-weight:900;box-shadow:0 0 40px rgba(168,85,247,.6);margin-top:20px}
+  h1{font-size:28px;margin:18px 0 5px;letter-spacing:1px;text-align:center}
+  h1 span{color:#a855f7}
+  p.sub{color:#999;font-size:14px;text-align:center;margin-bottom:30px}
+  .card{background:#111;border:1px solid #222;border-radius:20px;padding:22px;width:100%;max-width:380px;text-align:center}
+  .icon{font-size:40px;margin-bottom:10px}
+  .card h2{font-size:18px;margin-bottom:6px}
+  .card p{color:#888;font-size:13px;line-height:1.5;margin-bottom:20px}
+  .install{display:block;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;text-decoration:none;padding:16px;border-radius:14px;font-weight:800;font-size:16px}
+  .install:active{transform:scale(.97)}
+  .pasos{margin-top:25px;width:100%;max-width:380px}
+  .paso{display:flex;gap:12px;margin-bottom:12px;font-size:13px;color:#ccc;line-height:1.4}
+  .num{background:#222;width:26px;height:26px;min-width:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#a855f7}
+  .footer{margin-top:30px;color:#555;font-size:11px}
 </style>
 </head>
 <body>
 
-<div class="top"><b>LOS INTOCABLES</b><span>⋮</span></div>
+  <div class="logo">L</div>
+  <h1>LOS <span>INTOCABLES</span></h1>
+  <p class="sub">Anti-Revoke DNS</p>
 
-<div class="cat">CATEGORÍA</div>
-<h1>Firma IPA</h1>
-<p class="desc">Abre esta página en Safari. Instala el DNS primero. Después instala Esign, KSign, Scarlet o GBox y firma el IPA de LOS INTOCABLES dentro de esa app.</p>
+  <div class="card">
+    <div class="icon">🛡️</div>
+    <h2>Perfil DNS Anti-Revoke</h2>
+    <p>Protege tus certificados de Apple. Instálalo una vez y listo.</p>
+    <!-- ESTE ES EL BOTÓN QUE SÍ INSTALA -->
+    <a class="install" href="https://davidum19.github.io/ios-perfil/dns.mobileconfig">INSTALAR PERFIL DNS</a>
+  </div>
 
-<div class="paso">
-<b>PASO 1 &nbsp; Instalar DNS</b>
-<p>Perfil obligatorio antes de firmar. En el iPhone: Permitir, luego Ajustes, General, VPN y gestión de dispositivos, e instala el perfil.</p>
-<a class="btn-perfil" href="https://davidum19.github.io/ios-perfil/CFDNS-CP144%20(1).mobileconfig">INSTALAR PERFIL</a>
-</div>
+  <div class="pasos">
+    <div class="paso"><div class="num">1</div><div>Dale en <b>INSTALAR PERFIL DNS</b></div></div>
+    <div class="paso"><div class="num">2</div><div>Dale <b>Permitir</b></div></div>
+    <div class="paso"><div class="num">3</div><div>Ve a <b>Ajustes > General > VPN y gestión de dispositivos</b></div></div>
+    <div class="paso"><div class="num">4</div><div>Toca el perfil y dale <b>Instalar</b></div></div>
+  </div>
 
-<div class="tabs">
-<a href="#">Esign</a>
-<a href="#" class="active">KSign</a>
-<a href="#">Scarlet</a>
-<a href="#">GBox</a>
-</div>
+  <div class="footer">© 2026 LOS INTOCABLES</div>
 
-<div class="section"><b>KSign</b><span>22 apps</span></div>
-<p class="sub">Firma el IPA dentro de KSign. Si una no abre, prueba la siguiente.</p>
-
-<div class="item">
-  <div class="icon">K</div>
-  <div class="info"><b>KSign <span class="nuevo">NUEVO</span></b><p>Beihang University</p></div>
-  <a class="install" href="#">INSTALAR</a>
-</div>
-
-<div class="item">
-  <div class="icon">K</div>
-  <div class="info"><b>KSign <span class="nuevo">NUEVO</span></b><p>China Limited</p></div>
-  <a class="install" href="#">INSTALAR</a>
-</div>
-
-<div class="item">
-  <div class="icon">K</div>
-  <div class="info"><b>KSign <span class="nuevo">NUEVO</span></b><p>HSBC</p></div>
-  <a class="install" href="#">INSTALAR</a>
-</div>
-
-<div class="item">
-  <div class="icon">K</div>
- 
+</body>
+</html>
