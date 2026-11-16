@@ -5,42 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOS INTOCABLES</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
-  body{background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px;text-align:center}
-  .top{margin-top:30px;font-size:14px;letter-spacing:4px;color:#888}
-  h1{font-size:48px;margin:15px 0 5px;letter-spacing:2px;font-weight:900}
-  h1 span{color:#00ff88}
-  .sub{color:#aaa;margin-bottom:30px;font-size:15px}
-  .card{background:#111;border:1px solid #222;border-radius:20px;padding:25px;width:100%;max-width:380px;margin-top:10px}
-  .icon{font-size:50px;margin-bottom:10px}
-  .card h2{font-size:22px;margin-bottom:8px}
-  .card p{color:#aaa;font-size:14px;line-height:1.5;margin-bottom:20px}
-  .btn{display:block;background:#00ff88;color:#000;font-weight:900;font-size:18px;padding:16px;border-radius:12px;text-decoration:none;margin-bottom:12px}
-  .btn2{display:block;background:#fff;color:#000;font-weight:900;font-size:16px;padding:14px;border-radius:12px;text-decoration:none}
-  .pasos{text-align:left;margin-top:25px;font-size:13px;color:#888;line-height:1.8}
-  .footer{margin-top:auto;padding-top:30px;font-size:12px;color:#555}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,Arial,sans-serif}
+body{background:#000;color:#fff;padding:16px;padding-bottom:80px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:8px 4px}
+.top b{font-size:19px;letter-spacing:.5px}
+.top span{color:#666;font-size:22px}
+.cat{color:#888;font-size:11px;letter-spacing:2px;margin-top:18px}
+h1{font-size:28px;margin:4px 0 8px}
+.desc{color:#aaa;font-size:14px;line-height:1.5}
+.paso{margin-top:22px}
+.paso b{font-size:15px}
+.paso p{color:#aaa;font-size:13px;line-height:1.5;margin-top:4px}
+.btn-perfil{display:block;background:#fff;color:#000;text-align:center;font-weight:800;padding:14px;border-radius:999px;margin-top:14px;text-decoration:none;font-size:14px;letter-spacing:.5px}
+.tabs{display:flex;gap:8px;margin-top:22px;overflow-x:auto}
+.tabs a{color:#aaa;text-decoration:none;padding:8px 14px;border-radius:999px;font-size:14px;white-space:nowrap}
+.tabs a.active{background:#fff;color:#000;font-weight:700}
+.section{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
+.section b{font-size:18px}
+.section span{color:#888;font-size:13px}
+.sub{color:#aaa;font-size:13px;margin:6px 0 14px}
+.item{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #1a1a1a}
+.icon{width:52px;height:52px;background:#1a6cff;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;flex-shrink:0}
+.info{flex:1;min-width:0}
+.info b{font-size:15px;display:block}
+.info .nuevo{color:#fff;background:#222;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:5px}
+.info p{color:#888;font-size:12px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.install{background:#fff;color:#000;border:none;padding:9px 15px;border-radius:999px;font-weight:800;font-size:12px;text-decoration:none;flex-shrink:0}
+.footer{text-align:center;color:#666;font-size:12px;margin-top:30px;line-height:1.8}
 </style>
 </head>
 <body>
-  <div class="top">BIENVENIDO A</div>
-  <h1>LOS <span>INTOCABLES</span></h1>
-  <p class="sub">Conexión privada • Rápida • Segura</p>
 
-  <div class="card">
-    <div class="icon">🛡️</div>
-    <h2>Instalar Perfil VPN</h2>
-    <p>Instala el perfil para activar tu VPN de LOS INTOCABLES en tu iPhone. Es rápido y seguro.</p>
-    <a class="btn" href="#" onclick="alert('Perfil listo para instalar. En Ajustes > General > VPN y gestión de dispositivos, dale Instalar.'); return false;">⬇️ INSTALAR PERFIL VPN</a>
-    <a class="btn2" href="#">📱 INSTALAR</a>
-    <div class="pasos">
-      <b style="color:#fff">¿Cómo instalar?</b><br>
-      1. Dale en INSTALAR PERFIL VPN<br>
-      2. Te va a abrir Ajustes del iPhone<br>
-      3. Dale en Permitir > Instalar<br>
-      4. Pon tu código y listo ✅
-    </div>
-  </div>
+<div class="top"><b>LOS INTOCABLES</b><span>⋮</span></div>
 
-  <div class="footer">© 2026 LOS INTOCABLES - Todos los derechos reservados</div>
-</body>
-</html>
+<div class="cat">CATEGORÍA</div>
+<h1>Firma IPA</h1>
+<p class="desc">Abre esta página en Safari. Instala el DNS primero. Después instala Esign, KSign, Scarlet o GBox y firma el IPA de LOS INTOCABLES dentro de esa app.</p>
+
+<div class="paso">
+<b>PASO 1 &nbsp; Instalar DNS</b>
+<p>Perfil obligatorio antes de firmar. En el iPhone: Permitir, luego Ajustes, General, VPN y gestión de dispositivos, e instala el perfil.</p>
+<a class="btn-perfil" href="https://davidum19.github.io/ios-perfil/CFDNS-CP144%20(1).mobileconfig">INSTALAR PERFIL</a>
+</div>
+
+<div class="tabs">
+<a href="#">Esign</a>
+<a href="#" class="active">KSign</a>
+<a href="#">Scarlet</a>
+<a href="#">GBox</a>
+</div>
+
+<div class="section"><b>KSign</b><span>22 apps</span></div>
+<p class="sub">Firma el IPA dentro de KSign. Si una no abre, prueba la siguiente.</p>
+
+<div class="item">
+  <div class="icon">K</div>
+  <div class="info"><b>KSign <span class="nuevo">NUEVO</span></b><p>Beihang University</p></div>
+  <a class="install" href="#">INSTALAR</a>
+</div>
+
+<div class="item">
+  <div class="icon">K</div>
+  <div class="info"><b>KSign <span class="nuevo">NUEVO</span></b><p>China Limited</p></div>
+  <a class="install" href="#">INSTALAR</a>
+</div>
+
+<div class="item">
+  <div class="icon">K</div>
+  <div class="info"><b>KSign <span class="nuevo">NUEVO</span></b><p>HSBC</p></div>
+  <a class="install" href="#">INSTALAR</a>
+</div>
+
+<div class="item">
+  <div class="icon">K</div>
+ 
