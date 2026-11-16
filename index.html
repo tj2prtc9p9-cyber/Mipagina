@@ -3,34 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google</title>
+<title>LOS INTOCABLES</title>
 <style>
-body{font-family:Arial,sans-serif;text-align:center;margin:0;padding:0}
-.top{display:flex;justify-content:flex-end;gap:20px;padding:15px 25px;font-size:14px}
-.top a{color:#000;text-decoration:none}
-.logo{margin-top:120px;font-size:90px;font-weight:400;letter-spacing:-5px}
-.logo span:nth-child(1){color:#4285F4}
-.logo span:nth-child(2){color:#EA4335}
-.logo span:nth-child(3){color:#FBBC05}
-.logo span:nth-child(4){color:#4285F4}
-.logo span:nth-child(5){color:#34A853}
-.logo span:nth-child(6){color:#EA4335}
-.search{margin:30px auto;width:90%;max-width:580px;border:1px solid #dfe1e5;border-radius:30px;padding:12px 20px;display:flex;align-items:center;box-shadow:0 1px 6px rgba(0,0,0,0.1)}
-.search input{border:none;outline:none;width:100%;font-size:16px}
-.btns{margin-top:25px}
-.btns button{background:#f8f9fa;border:1px solid #f8f9fa;padding:10px 20px;margin:5px;border-radius:5px;cursor:pointer}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+  body{background:#000;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px;text-align:center}
+  .top{margin-top:30px;font-size:14px;letter-spacing:4px;color:#888}
+  h1{font-size:48px;margin:15px 0 5px;letter-spacing:2px;font-weight:900}
+  h1 span{color:#00ff88}
+  .sub{color:#aaa;margin-bottom:30px;font-size:15px}
+  .card{background:#111;border:1px solid #222;border-radius:20px;padding:25px;width:100%;max-width:380px;margin-top:10px}
+  .icon{font-size:50px;margin-bottom:10px}
+  .card h2{font-size:22px;margin-bottom:8px}
+  .card p{color:#aaa;font-size:14px;line-height:1.5;margin-bottom:20px}
+  .btn{display:block;background:#00ff88;color:#000;font-weight:900;font-size:18px;padding:16px;border-radius:12px;text-decoration:none;margin-bottom:12px}
+  .btn2{display:block;background:#fff;color:#000;font-weight:900;font-size:16px;padding:14px;border-radius:12px;text-decoration:none}
+  .pasos{text-align:left;margin-top:25px;font-size:13px;color:#888;line-height:1.8}
+  .footer{margin-top:auto;padding-top:30px;font-size:12px;color:#555}
 </style>
 </head>
 <body>
-<div class="top"><a href="#">Gmail</a><a href="#">Imágenes</a><a href="#">☰</a><a href="#">👤</a></div>
-<div class="logo"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
-<form action="https://www.google.com/search" method="GET">
-<div class="search">🔍 <input type="text" name="q" placeholder="Buscar en Google o escribir una URL" autofocus></div>
-<div class="btns">
-<button type="submit">Buscar con Google</button>
-<button type="submit" name="btnI" value="1">Voy a tener suerte</button>
-</div>
-</form>
-<p style="margin-top:30px;font-size:13px">Ofrecido por Google en: <a href="#">Español</a></p>
+  <div class="top">BIENVENIDO A</div>
+  <h1>LOS <span>INTOCABLES</span></h1>
+  <p class="sub">Conexión privada • Rápida • Segura</p>
+
+  <div class="card">
+    <div class="icon">🛡️</div>
+    <h2>Instalar Perfil VPN</h2>
+    <p>Instala el perfil para activar tu VPN de LOS INTOCABLES en tu iPhone. Es rápido y seguro.</p>
+    <a class="btn" href="#" onclick="alert('Perfil listo para instalar. En Ajustes > General > VPN y gestión de dispositivos, dale Instalar.'); return false;">⬇️ INSTALAR PERFIL VPN</a>
+    <a class="btn2" href="#">📱 INSTALAR</a>
+    <div class="pasos">
+      <b style="color:#fff">¿Cómo instalar?</b><br>
+      1. Dale en INSTALAR PERFIL VPN<br>
+      2. Te va a abrir Ajustes del iPhone<br>
+      3. Dale en Permitir > Instalar<br>
+      4. Pon tu código y listo ✅
+    </div>
+  </div>
+
+  <div class="footer">© 2026 LOS INTOCABLES - Todos los derechos reservados</div>
 </body>
 </html>
